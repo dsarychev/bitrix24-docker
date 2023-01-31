@@ -1,10 +1,10 @@
-FROM centos:7
+FROM centos:8
 
 # Add basics first
 RUN yum -y install epel-release \
-    http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
+    http://rpms.remirepo.net/enterprise/remi-release-8.rpm \
     yum-utils && \
-    yum-config-manager --enable remi-php72
+    yum-config-manager --enable remi-php82
 
 RUN yum update -y && yum upgrade -y && yum install -y initscripts \
     wget \
